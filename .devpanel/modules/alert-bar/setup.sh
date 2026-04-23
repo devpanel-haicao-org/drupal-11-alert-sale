@@ -77,7 +77,7 @@ if [ -f "$INDEX_FILE" ]; then
     # Relative path from WEB_ROOT to MODULE_DIR
     REL_PATH=$(realpath --relative-to="$CURRENT_WEB_ROOT" "$MODULE_DIR" 2>/dev/null || echo "")
     
-    if[ -n "$REL_PATH" ]; then
+    if [ -n "$REL_PATH" ]; then
         INCLUDE_CODE="include_once __DIR__ . '/${REL_PATH}/alert-bar.php';"
     else
         # Fallback absolute path if the system not yet realpath
