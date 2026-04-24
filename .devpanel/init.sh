@@ -59,6 +59,14 @@ else
   time drush -n updb
 fi
 
+# ==============================================================================
+# SET UP ALERT BAR (DYNAMIC DATA FETCHING & INJECTION)
+# ==============================================================================
+echo
+time source .devpanel/modules/alert-bar/setup.sh
+echo
+# ==============================================================================
+
 #== Warm up caches.
 echo
 echo 'Run cron.'
